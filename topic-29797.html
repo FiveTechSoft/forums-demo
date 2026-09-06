@@ -12,7 +12,7 @@
 <body>
 <div class="wrap">
   <div class="header"><a class="logo" href="index.html"><img src="site_logo.svg" alt="FiveTech Support Forums" width="200" height="60"></a><div class="header-text"><h1>FiveTech Support Forums</h1><div class="sub"><a href="https://fivetechsoft.github.io/" target="_blank" rel="noopener">FiveWin</a> / <a href="https://github.com/harbour/core" target="_blank" rel="noopener">Harbour</a> / xBase community</div></div><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌓</button></div>
-  <div class="navbar"><a href="index.html">Board index</a><a href="active-topics.html">Active topics</a><a href="https://github.com/FiveTechSoft/forums/discussions" target="_blank">All discussions</a><a href="https://github.com/login" target="_blank">Login (GitHub)</a><span class="nav-last-update">Last update on Sat Sep 05, 2026 01:48 PM UTC</span></div>
+  <div class="navbar"><a href="index.html">Board index</a><a href="active-topics.html">Active topics</a><a href="https://github.com/FiveTechSoft/forums/discussions" target="_blank">All discussions</a><a href="https://github.com/login" target="_blank">Login (GitHub)</a><span class="nav-last-update">Last update on Sun Sep 06, 2026 02:04 PM UTC</span></div>
   <div class="crumbs"><a href="index.html">Board index</a> <a href="forum-6.html">FiveWin para Harbour/xHarbour</a> Alguien tiene clase &amp;quot;TRepDos&amp;quot;</div>
   <div class="post">
     <div class="poster">
@@ -38,7 +38,7 @@ Cali-Colombia<br>
   <div class="post">
     <div class="poster">
       <div class="name"><a href="user-362.html" style="color:#00AA00">karinha</a></div>
-      <div class="rank">Posts: 8649</div>
+      <div class="rank">Posts: 8650</div>
       <img class="avatar avatar-img" src="avatars/362.jpg" alt="" loading="lazy">
       <div class="joined">Joined: Tue Dec 20, 2005 07:36 PM</div>
       
@@ -134,7 +134,7 @@ Tratando de retomar la programación....</div>
   <div class="post">
     <div class="poster">
       <div class="name"><a href="user-936.html" style="color:#105289">csincuir</a></div>
-      <div class="rank">Posts: 480</div>
+      <div class="rank">Posts: 483</div>
       <div class="avatar"></div>
       <div class="joined">Joined: Sat Feb 03, 2007 06:36 AM</div>
       
@@ -156,7 +156,7 @@ Yo no encontraba el ejemplo que tenia de la clase.</p>
   <div class="post">
     <div class="poster">
       <div class="name"><a href="user-362.html" style="color:#00AA00">karinha</a></div>
-      <div class="rank">Posts: 8649</div>
+      <div class="rank">Posts: 8650</div>
       <img class="avatar avatar-img" src="avatars/362.jpg" alt="" loading="lazy">
       <div class="joined">Joined: Tue Dec 20, 2005 07:36 PM</div>
       
@@ -188,16 +188,19 @@ Saludos.</div>
         Posted: Thu Dec 11, 2014 07:29 PM
       </div>
       <div class="content"><p>amigo en mis cositas encontre esto:</p>
-<h1>include &quot;FiveWin.ch&quot;</h1>
-<p>FUNCTION Main()<br>
-    LOCAL oPen<br>
-    PUBLIC oImp, aoFont[4], aAnchop[4]<br>
-    SET DATE TO FRENCH<br>
-    DEFINE PEN oPen WIDTH 5<br>
-    IniImp(21.5, 27.9, 72, 90, &quot;CompraVenta de Hacienda&quot;, .t., .t., .f., 1 )<br>
-        PAGE<br>
-            PrnBox (22, 7,28,89,oPen)</p>
-<pre><code>    PrnLine(30, 7,30,89,oPen)
+
+<div class="codebox"><div class="codehead"><span>Code:</span> <a href="#" class="cb-select">Select all</a> <a href="#" class="cb-toggle">Collapse</a></div><pre><code class="language-harbour">#include "FiveWin.ch"
+
+FUNCTION Main()
+	LOCAL oPen
+	PUBLIC oImp, aoFont[4], aAnchop[4]
+	SET DATE TO FRENCH
+	DEFINE PEN oPen WIDTH 5
+	IniImp(21.5, 27.9, 72, 90, "CompraVenta de Hacienda", .t., .t., .f., 1 )
+        PAGE
+            PrnBox (22, 7,28,89,oPen)
+
+    PrnLine(30, 7,30,89,oPen)
         PrnLine(33, 7,33,89,oPen)
         prnLine(43, 7,43,89,oPen)
 
@@ -213,248 +216,252 @@ Saludos.</div>
         PrnLine(52,62,52,89,oPen)
 
         //cabezal
-        PrnSay(16,60, &amp;quot;Form.:   &amp;quot;+ &amp;quot;123425&amp;quot;, aoFont[1],80)
-        PrnSay(18, 8,&amp;quot;Empresa XXXXXX&amp;quot;)
+        PrnSay(16,60, "Form.:   "+ "123425", aoFont[1],80)
+        PrnSay(18, 8,"Empresa XXXXXX")
         PrnSay(18,60,Date())
-        PrnSay(19, 8,&amp;quot;123456&amp;quot;)
+        PrnSay(19, 8,"123456")
         PrnSay(19,60,1250)
-        PrnSay(23, 8,&amp;quot;Productor:&amp;quot;, aoFont[1],80)
-        PrnSay(24, 8,&amp;quot;El Productor que vende&amp;quot;, aoFont[1],80)
-        PrnSay(23,45,&amp;quot;Consignatario:&amp;quot;, aoFont[1],80)
-        PrnSay(24,45,&amp;quot;El Consignatario que Vende&amp;quot;, aoFont[1],80)
-        PrnSay(25, 8,&amp;quot;RUT: &amp;quot;+&amp;quot;12 345678 9123&amp;quot;, aoFont[1],80)
-        PrnSay(25,30,&amp;quot;CI: &amp;quot; +&amp;quot;173216547&amp;quot;,aoFont[1],80)
-        PrnSay(25,45,&amp;quot;RUT: &amp;quot;+&amp;quot;12 345678 9123&amp;quot;, aoFont[1],80)
-        PrnSay(26, 8,&amp;quot;Dicose: &amp;quot;+&amp;quot;123 456 789&amp;quot;, aoFont[1],80)
-        PrnSay(26,45,&amp;quot;Dicose: &amp;quot;+&amp;quot;123 456 789&amp;quot;, aoFont[1],80)
-        PrnSay(27, 8,&amp;quot;Guia: &amp;quot;+&amp;quot;123456&amp;quot;, aoFont[1],80)
-        PrnSay(27,45,&amp;quot;Guia: &amp;quot;+&amp;quot;567890&amp;quot;, aoFont[1],80)
-        PrnSay(29, 8,&amp;quot;Tiene flete? &amp;quot;, aoFont[1],80)
+        PrnSay(23, 8,"Productor:", aoFont[1],80)
+        PrnSay(24, 8,"El Productor que vende", aoFont[1],80)
+        PrnSay(23,45,"Consignatario:", aoFont[1],80)
+        PrnSay(24,45,"El Consignatario que Vende", aoFont[1],80)
+        PrnSay(25, 8,"RUT: "+"12 345678 9123", aoFont[1],80)
+        PrnSay(25,30,"CI: " +"173216547",aoFont[1],80)
+        PrnSay(25,45,"RUT: "+"12 345678 9123", aoFont[1],80)
+        PrnSay(26, 8,"Dicose: "+"123 456 789", aoFont[1],80)
+        PrnSay(26,45,"Dicose: "+"123 456 789", aoFont[1],80)
+        PrnSay(27, 8,"Guia: "+"123456", aoFont[1],80)
+        PrnSay(27,45,"Guia: "+"567890", aoFont[1],80)
+        PrnSay(29, 8,"Tiene flete? ", aoFont[1],80)
         PrnSay(29, 21,.t., aoFont[1],80)
-        PrnSay(35, 7, &amp;quot;Este es un texto largo escrito para utilizar 120 columnas en medio de un documento que estaba en 80 columnas&amp;quot; )
+        PrnSay(35, 7, "Este es un texto largo escrito para utilizar 120 columnas en medio de un documento que estaba en 80 columnas" )
 
-        PrnSay(63,8,&amp;quot;      ..............................     ...............................&amp;quot;,aoFont[1],120)
-        PrnSay(64,8,&amp;quot;            Firma del Comprador          Firma de Vendedor/Representante&amp;quot;,aoFont[1],120)
-    ENDPAGE
+        PrnSay(63,8,"      ..............................     ...............................",aoFont[1],120)
+        PrnSay(64,8,"            Firma del Comprador          Firma de Vendedor/Representante",aoFont[1],120)
+	ENDPAGE
 //Finalizo impresion
 FinImp()
 oPen:End()
-</code></pre>
-<p>RETURN NIL<br>
-/*Fin Función Main()</p>
-<hr>
-<p>/<em><br>
-Funciones para imprimir con la clase tprint a la manera de la impresión de clipper en modo consola.<br>
-</em>/<br>
-/*<br>
-Funciones de Impresión con clase tPrint</p>
-<hr>
-<pre><code>IniImp( nAncho, nLargo [, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias ] )
-    Configura la impresión indicando: ancho y largo de páginas en cms.
-    cantidad de filas y columnas
-    Nombre del spooler de impresión
-    Seleccion de Impresora
-    si va Preview
-    si es apaisado
-    cantidad de copias
-    (Como la impresión de Consola pero con Tprint)
+RETURN NIL
+/*Fin Función Main()
+------------------------------------
+/*
+Funciones para imprimir con la clase tprint a la manera de la impresión de clipper en modo consola.
+*/
+/*
+Funciones de Impresión con clase tPrint
+---------------------------------------
+
+IniImp( nAncho, nLargo [, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias ] )
+	Configura la impresión indicando: ancho y largo de páginas en cms.
+	cantidad de filas y columnas
+	Nombre del spooler de impresión
+	Seleccion de Impresora
+	si va Preview
+	si es apaisado
+	cantidad de copias
+	(Como la impresión de Consola pero con Tprint)
 PrnSay( nFila, nColum, Var, oFuente[ , nC ] )
-    Versión del viejo Say de consola con la clase Tprint
+	Versión del viejo Say de consola con la clase Tprint
 PrnBox( nFila1, nCol1, nFila2, nCol2, oPen, nC )
-    Imiprimir una caja con fila columna y fila columna estilo consola con tPrint
+	Imiprimir una caja con fila columna y fila columna estilo consola con tPrint
 PrnLine( nFila1, nCol1, nFila2, nCol2, oPen, nC )
-    Imprimir una línea estilo consola con TPrint
+	Imprimir una línea estilo consola con TPrint
 FinImp()
-    Cierre de la impresión
-</code></pre>
-<hr>
-<p>FUNCIONES DE IMPRESIÓN</p>
-<p>----------------------------------------------------------------------------------------------------------------------<em>/<br>
-/</em><br>
-    Variables públicas requeridas en programa principal:<br>
-    PUBLIC oImp, aoFont[4], aAnchop[4]<br>
-*/</p>
-<h1>include &quot;Fivewin.ch&quot;</h1>
-<p>FUNCTION IniImp(nAncho, nLargo, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias)<br>
-/<em><br>
-    Sintaxis:<br>
-    IniImp( nAncho, nLargo [, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias ] )<br>
-    Requeridos:<br>
-    cAncho       - Ancho de pagina en cms.<br>
-    cLargo       - Largo de página en cms.<br>
-    Opcionales:<br>
-    nFilas       - Cantidad de filas en el largo                                 DEFAULT 60<br>
-    nColumnas    - Cantidad de columnas en el ancho 80 o 120                     DEFAULT 80<br>
-    cNom_Spooler - Nombre del listado en Spooler de impresion de Windows         DEFAULT &quot;Listado&quot;<br>
-    lSel_imp     - .t. para que el usuario seleccione la impresora que usará     DEFAULT .t.<br>
-    lPreview     - .t. para que se vea una vista preliminar.                     DEFAULT .f.<br>
-    lLnds        - .t. para Apaisado                                             DEFAULT .f.<br>
-    nCopias      - Cantidad de copias                                            DEFAULT 1<br>
-</em>/</p>
-<p>LOCAL cFuente<br>
-  cFuente:=&quot;Lucida Console&quot;       //Se utiliza aquí una fuente escalar<br>
-                                                    //evitando así mala ubicación de caracteres<br>
-  //Valores default<br>
-  IF cNom_Spooler=NIL<br>
-    cNom_Spooler=&quot;Listado&quot;<br>
-  ENDIF<br>
-  IF lSel_Imp=NIL<br>
-    lSel_imp=.t.<br>
-  ENDIF<br>
-  IF lPreview=NIL<br>
-    lPreview=.f.<br>
-  ENDIF<br>
-  IF lLnds=NIL<br>
-    lLnds=.f.<br>
-  ENDIF<br>
-  IF nCopias=NIL<br>
-    nCopias=1<br>
-  ENDIF</p>
-<pre><code>PrnSetSize(nAncho*100, nLargo*100)
-</code></pre>
-<p>//Creo objeto tprinter<br>
-  IF !lSel_imp .AND. !lPreview<br>
-        PRINT oImp TITLE cNom_Spooler<br>
-    ELSEIF lSel_imp .and. !lPreview<br>
-        PRINT oImp TITLE cNom_Spooler FROM USER<br>
-    ELSEIF !lSel_imp .and. lPreview<br>
-        PRINT oImp TITLE cNom_Spooler PREVIEW<br>
-    ELSEIF lSel_imp .and. lPreview<br>
-        PRINT oImp TITLE cNom_Spooler FROM USER PREVIEW<br>
-    ENDIF<br>
-    IF lLnds<br>
-        oImp:SetLandscape()<br>
-  ENDIF<br>
-  //establezco las copias<br>
-    oImp:SetCopies(nCopias)<br>
-  //calculo anchos de fila y columna segun la resolucion de la impresora<br>
-  aAnchop[1]:=oImp:nVertRes()/nFilas<br>
-    aAnchop[2]:=oImp:nHorzRes()/nColumnas   //ancho en pixels de columna<br>
-    aAnchop[3]:=nColumnas                                   //hago publica nColumas en vector<br>
-    aAnchop[4]:=lLnds                                           //hago publica lLnds en el vector<br>
-    //Defino Fonts<br>
-    //Font normal<br>
-  DEFINE FONT aoFont[1] NAME &quot;Lucida Console&quot; SIZE 0, -10 OF oImp<br>
-  //Font Comprimida<br>
-  DEFINE FONT aoFont[2] NAME &quot;Lucida Console&quot; SIZE 0,  -8 OF oImp<br>
-  //Font Muy Grande<br>
-  DEFINE FONT aoFont[3] NAME &quot;Lucida Console&quot; SIZE 0, -24 OF oImp<br>
-  //Font Grande<br>
-  DEFINE FONT aoFont[4] NAME &quot;Lucida Console&quot; SIZE 0, -16 OF oImp<br>
-RETURN NIL</p>
-<p>/<em>Fin Funcion IniImp<br>
-----------------------------------------------------------------------------------------------------------------------</em>/<br>
-FUNCTION PrnSay( nFila, nColum, Var, oFuente, nC )<br>
-LOCAL i, wVar, nesp, nCorr<br>
-/*Sintaxis:<br>
-    PrnSay( nFila, nColum, Var [, oFuente, nC ] )<br>
-    nFila es la fila donde se hace la impresion<br>
-    ncolum es la columna donde comienza<br>
-    var es una variable de cualquier tipo que contiene lo que se va a imprimir<br>
-    nC es el total de columnas base (80 o 120)</p>
-<pre><code>El parámetro var es convertido a texto sin espacios al final y alineado a la derecha.
-</code></pre>
-<p><em>/<br>
-    IF nC=NIL<br>
-        //Si no se especifica cantidad de columnas uso las especificadas en IniImp()<br>
-        aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]<br>
-    ELSE<br>
-        //Si se especifico cant. de columnas recalculo el ancho de columna<br>
-        aAnchop[2]:=oImp:nHorzRes()/nC<br>
-    ENDIF<br>
-    //Convierto Var a texto para imprimir<br>
-    IF VALTYPE(Var)=&quot;A&quot; .or. VALTYPE(Var)=&quot;B&quot; .or. VALTYPE(Var)=&quot;M&quot; .or. VALTYPE(Var)=&quot;O&quot; .or. VALTYPE(Var)=&quot;U&quot;<br>
-        wVar=Space(1)<br>
-    ELSEIF valtype(Var)=&quot;C&quot;<br>
-        wVar=Rtrim(Var)<br>
-    ELSEIF VALTYPE(Var)=&quot;D&quot;<br>
-        wVar:=Transform(Var,&quot;@D&quot;)<br>
-    ELSEIF VALTYPE(Var)=&quot;L&quot;<br>
-        IF Var<br>
-            wVar=&quot;Si&quot;<br>
-        ELSE<br>
-            wVar=&quot;No&quot;<br>
-        ENDIF<br>
-    ELSEIF VALTYPE(Var)=&quot;N&quot;<br>
-        wVar:=Alltrim(Str(Var))<br>
-    ENDIF<br>
-  //paso fila y columna a pixels<br>
-    nFila   := nFila  * aAnchop[1]<br>
-    nColum  := nColum * aAnchop[2]      //Columna en pixels<br>
-    nesp=( len(wVar) - len( Ltrim( wVar ) ) ) * aAnchop[2]<br>
-    wVar:=Ltrim(wVar)<br>
-    IF wVar&lt;&gt;Space(1)<br>
-        IF Pcount()=3 //Si no indique fuente<br>
-            oImp:Say( nFila, (nColum + nesp), wVar, if( aAnchop[3]&lt;=80, aoFont[1], If( aAnchop[4], aoFont[1], aoFont[2] ) ) )<br>
-            //                                          si menos 80 cols uso aofont[1] sino si es apaisado, aofont[1] o sino aofont[2]<br>
-        ELSE  //si indique fuente<br>
-            oImp:Say(nFila,(nColum + nesp),wVar, oFuente)<br>
-        ENDIF<br>
-    ENDIF<br>
-RETURN NIL<br>
-/</em>Fin Funcion PrnSay<br>
-----------------------------------------------------------------------------------------------------------------------<em>/<br>
-FUNCTION PrnBox(nFila1, nCol1, nFila2, nCol2, oPen, nC)<br>
-/</em>Sintaxis:<br>
-    PrnBox( nFila, nCol1, nFila2, nCol2, oPen, nC )<br>
-    nFila es la fila donde se hace la impresion<br>
-    ncolum es la columna donde comienza<br>
-    var es una variable de cualquier tipo que contiene lo que se va a imprimir<br>
-    nC es el total de columnas base (80 o 120)<br>
-*/<br>
-    IF nC=NIL<br>
-        //Si no se especifica cantidad de columnas uso las especificadas en IniImp()<br>
-        aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]<br>
-    ELSE<br>
-        //Si se especifico cant. de columnas recalculo el ancho de columna<br>
-        aAnchop[2]:=oImp:nHorzRes()/nC<br>
-    ENDIF<br>
-    //paso fila y columna a pixels<br>
-    nFila1 := nFila1 * aAnchop[1]<br>
-    nCol1  := nCol1  * aAnchop[2]<br>
-    nFila2 := nFila2 * aAnchop[1]<br>
-    nCol2  := nCol2  * aAnchop[2]<br>
-    //dibujo el cuadro<br>
-    oImp:Box(nFila1, nCol1, nFila2, nCol2, oPen)<br>
-RETURN NIL</p>
-<p>/<em>Fin Funcion PrnBox<br>
----------------------------------------------------------------------------------------------------------------------</em>/<br>
-FUNCTION PrnLine(nFila1, nCol1, nFila2, nCol2, oPen, nC)<br>
-    IF Pcount()=6<br>
-        //si se especifico cant. de columnas recalculo el ancho de columna<br>
-        aAnchop[2]:=oImp:nHorzRes()/nC<br>
-    ELSE<br>
-        //Si no se especifica cantidad de columnas uso las especificadas en IniImp()<br>
-        aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]<br>
-    ENDIF<br>
-    //paso fila y columna a pixels<br>
-    nFila1 := nFila1 * aAnchop[1]<br>
-    nCol1  := nCol1  * aAnchop[2]<br>
-    nFila2 := nFila2 * aAnchop[1]<br>
-    nCol2  := nCol2  * aAnchop[2]<br>
-    //Dibujo la linea<br>
-    oImp:Line(nFila1, nCol1, nFila2, nCol2, oPen)<br>
-RETURN NIL<br>
-/<em>Fin Funcion PrnLine<br>
----------------------------------------------------------------------------------------------------------------------</em>/<br>
-FUNCTION FinImp()<br>
-//Destruyo las fuentes<br>
-    //finalizo la impresión<br>
-  ENDPRINT<br>
-  //elimino los fonts<br>
-    aoFont[1]:End()<br>
-    aoFont[2]:End()<br>
-    aoFont[3]:End()<br>
-RETURN NIL<br>
-/<em>Fin Funcion FinImp<br>
-----------------------------------------------------------------------------------------------------------------------</em>/</p></div>
+	Cierre de la impresión
+----------------------------------------------------------------------------------------------------------------------
+
+FUNCIONES DE IMPRESIÓN
+
+----------------------------------------------------------------------------------------------------------------------*/
+/*
+	Variables públicas requeridas en programa principal:
+	PUBLIC oImp, aoFont[4], aAnchop[4]
+*/
+#include "Fivewin.ch"
+FUNCTION IniImp(nAncho, nLargo, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias)
+/*
+	Sintaxis:
+	IniImp( nAncho, nLargo [, nFilas, nColumnas, cNom_spooler, lsel_imp, lpreview, lLnds ,nCopias ] )
+	Requeridos:
+	cAncho       - Ancho de pagina en cms.
+	cLargo       - Largo de página en cms.
+	Opcionales:
+	nFilas       - Cantidad de filas en el largo                                 DEFAULT 60
+	nColumnas    - Cantidad de columnas en el ancho 80 o 120                     DEFAULT 80
+	cNom_Spooler - Nombre del listado en Spooler de impresion de Windows         DEFAULT "Listado"
+	lSel_imp     - .t. para que el usuario seleccione la impresora que usará     DEFAULT .t.
+	lPreview     - .t. para que se vea una vista preliminar.                     DEFAULT .f.
+	lLnds        - .t. para Apaisado                                             DEFAULT .f.
+	nCopias      - Cantidad de copias                                            DEFAULT 1
+*/
+
+  LOCAL cFuente
+  cFuente:="Lucida Console"	    //Se utiliza aquí una fuente escalar
+    		    								    //evitando así mala ubicación de caracteres
+  //Valores default
+  IF cNom_Spooler=NIL
+  	cNom_Spooler="Listado"
+  ENDIF
+  IF lSel_Imp=NIL
+  	lSel_imp=.t.
+  ENDIF
+  IF lPreview=NIL
+  	lPreview=.f.
+  ENDIF
+  IF lLnds=NIL
+  	lLnds=.f.
+  ENDIF
+  IF nCopias=NIL
+  	nCopias=1
+  ENDIF
+
+PrnSetSize(nAncho*100, nLargo*100)
+  //Creo objeto tprinter
+  IF !lSel_imp .AND. !lPreview
+		PRINT oImp TITLE cNom_Spooler
+	ELSEIF lSel_imp .and. !lPreview
+		PRINT oImp TITLE cNom_Spooler FROM USER
+	ELSEIF !lSel_imp .and. lPreview
+		PRINT oImp TITLE cNom_Spooler PREVIEW
+	ELSEIF lSel_imp .and. lPreview
+		PRINT oImp TITLE cNom_Spooler FROM USER PREVIEW
+	ENDIF
+	IF lLnds
+		oImp:SetLandscape()
+  ENDIF
+  //establezco las copias
+	oImp:SetCopies(nCopias)
+  //calculo anchos de fila y columna segun la resolucion de la impresora
+  aAnchop[1]:=oImp:nVertRes()/nFilas
+	aAnchop[2]:=oImp:nHorzRes()/nColumnas  	//ancho en pixels de columna
+	aAnchop[3]:=nColumnas  									//hago publica nColumas en vector
+	aAnchop[4]:=lLnds						    				//hago publica lLnds en el vector
+	//Defino Fonts
+	//Font normal
+  DEFINE FONT aoFont[1] NAME "Lucida Console" SIZE 0, -10 OF oImp
+  //Font Comprimida
+  DEFINE FONT aoFont[2] NAME "Lucida Console" SIZE 0,  -8 OF oImp
+  //Font Muy Grande
+  DEFINE FONT aoFont[3] NAME "Lucida Console" SIZE 0, -24 OF oImp
+  //Font Grande
+  DEFINE FONT aoFont[4] NAME "Lucida Console" SIZE 0, -16 OF oImp
+RETURN NIL
+
+/*Fin Funcion IniImp
+----------------------------------------------------------------------------------------------------------------------*/
+FUNCTION PrnSay( nFila, nColum, Var, oFuente, nC )
+LOCAL i, wVar, nesp, nCorr
+/*Sintaxis:
+	PrnSay( nFila, nColum, Var [, oFuente, nC ] )
+	nFila es la fila donde se hace la impresion
+	ncolum es la columna donde comienza
+	var es una variable de cualquier tipo que contiene lo que se va a imprimir
+	nC es el total de columnas base (80 o 120)
+
+El parámetro var es convertido a texto sin espacios al final y alineado a la derecha.
+*/
+	IF nC=NIL
+		//Si no se especifica cantidad de columnas uso las especificadas en IniImp()
+		aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]
+	ELSE
+		//Si se especifico cant. de columnas recalculo el ancho de columna
+		aAnchop[2]:=oImp:nHorzRes()/nC
+	ENDIF
+	//Convierto Var a texto para imprimir
+	IF VALTYPE(Var)="A" .or. VALTYPE(Var)="B" .or. VALTYPE(Var)="M" .or. VALTYPE(Var)="O" .or. VALTYPE(Var)="U"
+		wVar=Space(1)
+	ELSEIF valtype(Var)="C"
+		wVar=Rtrim(Var)
+	ELSEIF VALTYPE(Var)="D"
+		wVar:=Transform(Var,"@D")
+	ELSEIF VALTYPE(Var)="L"
+		IF Var
+			wVar="Si"
+		ELSE
+			wVar="No"
+		ENDIF
+	ELSEIF VALTYPE(Var)="N"
+		wVar:=Alltrim(Str(Var))
+	ENDIF
+  //paso fila y columna a pixels
+	nFila   := nFila  * aAnchop[1]
+	nColum  := nColum * aAnchop[2] 		//Columna en pixels
+	nesp=( len(wVar) - len( Ltrim( wVar ) ) ) * aAnchop[2]
+	wVar:=Ltrim(wVar)
+	IF wVar&lt;&gt;Space(1)
+		IF Pcount()=3 //Si no indique fuente
+			oImp:Say( nFila, (nColum + nesp), wVar, if( aAnchop[3]&lt;=80, aoFont[1], If( aAnchop[4], aoFont[1], aoFont[2] ) ) )
+			//                                          si menos 80 cols uso aofont[1] sino si es apaisado, aofont[1] o sino aofont[2]
+		ELSE  //si indique fuente
+			oImp:Say(nFila,(nColum + nesp),wVar, oFuente)
+		ENDIF
+	ENDIF
+RETURN NIL
+/*Fin Funcion PrnSay
+----------------------------------------------------------------------------------------------------------------------*/
+FUNCTION PrnBox(nFila1, nCol1, nFila2, nCol2, oPen, nC)
+/*Sintaxis:
+	PrnBox( nFila, nCol1, nFila2, nCol2, oPen, nC )
+	nFila es la fila donde se hace la impresion
+	ncolum es la columna donde comienza
+	var es una variable de cualquier tipo que contiene lo que se va a imprimir
+	nC es el total de columnas base (80 o 120)
+*/
+	IF nC=NIL
+		//Si no se especifica cantidad de columnas uso las especificadas en IniImp()
+		aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]
+	ELSE
+		//Si se especifico cant. de columnas recalculo el ancho de columna
+		aAnchop[2]:=oImp:nHorzRes()/nC
+	ENDIF
+	//paso fila y columna a pixels
+	nFila1 := nFila1 * aAnchop[1]
+	nCol1  := nCol1  * aAnchop[2]
+	nFila2 := nFila2 * aAnchop[1]
+	nCol2  := nCol2  * aAnchop[2]
+	//dibujo el cuadro
+	oImp:Box(nFila1, nCol1, nFila2, nCol2, oPen)
+RETURN NIL
+
+/*Fin Funcion PrnBox
+---------------------------------------------------------------------------------------------------------------------*/
+FUNCTION PrnLine(nFila1, nCol1, nFila2, nCol2, oPen, nC)
+	IF Pcount()=6
+		//si se especifico cant. de columnas recalculo el ancho de columna
+		aAnchop[2]:=oImp:nHorzRes()/nC
+	ELSE
+		//Si no se especifica cantidad de columnas uso las especificadas en IniImp()
+		aAnchop[2]:=oImp:nHorzRes()/aAnchop[3]
+	ENDIF
+	//paso fila y columna a pixels
+	nFila1 := nFila1 * aAnchop[1]
+	nCol1  := nCol1  * aAnchop[2]
+	nFila2 := nFila2 * aAnchop[1]
+	nCol2  := nCol2  * aAnchop[2]
+	//Dibujo la linea
+	oImp:Line(nFila1, nCol1, nFila2, nCol2, oPen)
+RETURN NIL
+/*Fin Funcion PrnLine
+---------------------------------------------------------------------------------------------------------------------*/
+FUNCTION FinImp()
+//Destruyo las fuentes
+	//finalizo la impresión
+  ENDPRINT
+  //elimino los fonts
+	aoFont[1]:End()
+	aoFont[2]:End()
+	aoFont[3]:End()
+RETURN NIL
+/*Fin Funcion FinImp
+----------------------------------------------------------------------------------------------------------------------*/</code></pre></div></div>
       <div class="signature"></div>
     </div>
   </div>
   <div class="post">
     <div class="poster">
       <div class="name"><a href="user-2.html" style="color:#AA0000">Antonio Linares</a></div>
-      <div class="rank">Posts: 44475</div>
+      <div class="rank">Posts: 44478</div>
       <img class="avatar avatar-img" src="avatars/2.jpg" alt="" loading="lazy">
       <div class="joined">Joined: Thu Oct 06, 2005 05:47 PM</div>
       
@@ -469,6 +476,31 @@ RETURN NIL<br>
 <br>
 Antonio Linares<br>
 <a href="http://www.fivetechsoft.com" rel="noopener">www.fivetechsoft.com</a></div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="poster">
+      <div class="name"><a href="user-362.html" style="color:#00AA00">karinha</a></div>
+      <div class="rank">Posts: 8650</div>
+      <img class="avatar avatar-img" src="avatars/362.jpg" alt="" loading="lazy">
+      <div class="joined">Joined: Tue Dec 20, 2005 07:36 PM</div>
+      
+    </div>
+    <div class="body">
+      <div class="meta">
+        <h3 id="p286172" class="subject">Re: Alguien tiene clase &amp;quot;TRepDos&amp;quot;</h3>
+        Posted: Sat Sep 05, 2026 03:45 PM
+      </div>
+      <div class="content"><blockquote><cite>Antonio Linares wrote:</cite>
+<p><a href="https://bitbucket.org/fivetech/fivewin-contributions/downloads/Trepdos.zip" rel="noopener"><a href="https://bitbucket.org/fivetech/fivewin- ... repdos.zip" rel="noopener">https://bitbucket.org/fivetech/fivewin-contributions/downloads/Trepdos.zip</a></a></p>
+</blockquote>
+
+<p>Maestro Antônio, el enlace está roto; ¿podría volver a publicarlo, por favor?</p>
+
+<p>Gracias, tks.</p>
+
+<p>Regards, saludos.</p></div>
+      <div class="signature">João Santos - São Paulo - Brasil - Phone: +55(11)95150-7341</div>
     </div>
   </div>
   <div class="giscus-wrap">
