@@ -12,7 +12,7 @@
 <body>
 <div class="wrap">
   <div class="header"><a class="logo" href="index.html"><img src="site_logo.svg" alt="FiveTech Support Forums" width="200" height="60"></a><div class="header-text"><h1>FiveTech Support Forums</h1><div class="sub"><a href="https://fivetechsoft.github.io/" target="_blank" rel="noopener">FiveWin</a> / <a href="https://github.com/harbour/core" target="_blank" rel="noopener">Harbour</a> / xBase community</div></div><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle theme">🌓</button></div>
-  <div class="navbar"><a href="index.html">Board index</a><a href="active-topics.html">Active topics</a><a href="https://github.com/FiveTechSoft/forums/discussions" target="_blank">All discussions</a><a href="https://github.com/login" target="_blank">Login (GitHub)</a><span class="nav-last-update">Last update on Wed Sep 09, 2026 03:04 PM UTC</span></div>
+  <div class="navbar"><a href="index.html">Board index</a><a href="active-topics.html">Active topics</a><a href="https://github.com/FiveTechSoft/forums/discussions" target="_blank">All discussions</a><a href="https://github.com/login" target="_blank">Login (GitHub)</a><span class="nav-last-update">Last update on Thu Sep 10, 2026 02:57 PM UTC</span></div>
   <div class="crumbs"><a href="index.html">Board index</a> <a href="forum-6.html">FiveWin para Harbour/xHarbour</a> OpenADS libre y de código abierto &amp;#127963;️&amp;#128142;&amp;#128170;</div>
   <div class="post">
     <div class="poster">
@@ -112,7 +112,7 @@ Desde Managua, Nicaragua (CA)</div>
   <div class="post">
     <div class="poster">
       <div class="name"><a href="user-3881.html" style="color:#105289">walterburgos</a></div>
-      <div class="rank">Posts: 7</div>
+      <div class="rank">Posts: 9</div>
       <div class="avatar"></div>
       <div class="joined">Joined: Thu Jul 27, 2017 04:59 PM</div>
       
@@ -159,6 +159,93 @@ Pero no he podido conectarme con la base de datos .</p>
 <br>
 Antonio Linares<br>
 <a href="http://www.fivetechsoft.com" rel="noopener">www.fivetechsoft.com</a></div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="poster">
+      <div class="name"><a href="user-3881.html" style="color:#105289">walterburgos</a></div>
+      <div class="rank">Posts: 9</div>
+      <div class="avatar"></div>
+      <div class="joined">Joined: Thu Jul 27, 2017 04:59 PM</div>
+      
+    </div>
+    <div class="body">
+      <div class="meta">
+        <h3 id="p286205" class="subject">Re: OpenADS libre y de código abierto &amp;#127963;️&amp;#128142;&amp;#128170;</h3>
+        Posted: Wed Sep 09, 2026 03:55 PM
+      </div>
+      <div class="content"><p>Gracias , por tu atención.</p> 
+
+<p>Lo voy a probar.<br>
+De todos modos logre hacerlo funcionar. Migre las dbfs, a MariaDB. <br>
+Y logre conectarme. <br>
+Ahora estoy probando ejemplos muy básicos . Como el siguiente :<br>
+if  adsConnect60( cUri ) == .t.</p>
+	
+<div class="codebox"><div class="codehead"><span>Code:</span> <a href="#" class="cb-select">Select all</a> <a href="#" class="cb-toggle">Collapse</a></div><pre><code class="language-harbour"> USE clientes VIA "ADSCDX" SHARED NEW Alias Clientes
+		? "¡Tabla abierta correctamente en MariaDB!"
+		? clientes -&gt; ( reccount())      ( esto lo realiza bien)
+                    ? Clientes -&gt; nombre             ( esto también )
+
+     if clientes -&gt; ( dbAppend())
+        replace clientes-&gt;NroDoc with 1662                        ( de acá en adelante me da error que no  Error ADSCDX/5000  unknown table )
+        replace clientes-&gt;NOmbre with "PRUEBA DE NOMBRE"
+        clientes-&gt; ( dbUnlock() )   
+     else 
+        ? "no pudo hacer append"            
+     endif    
+     
+     CLOSE clientes</code></pre></div>
+<p>endif</p>    
+
+<p>Espero haber sido claro, con el problema. <br>
+Desde ya, Gracias anticipadas.</p></div>
+      <div class="signature"></div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="poster">
+      <div class="name"><a href="user-179.html" style="color:#105289">wilsongamboa</a></div>
+      <div class="rank">Posts: 672</div>
+      <img class="avatar avatar-img" src="avatars/179.jpg" alt="" loading="lazy">
+      <div class="joined">Joined: Wed Oct 19, 2005 06:41 PM</div>
+      
+    </div>
+    <div class="body">
+      <div class="meta">
+        <h3 id="p286207" class="subject">Re: OpenADS libre y de código abierto &amp;#127963;️&amp;#128142;&amp;#128170;</h3>
+        Posted: Wed Sep 09, 2026 04:14 PM
+      </div>
+      <div class="content"><p>buneos dias compañero solo una observacion dbappend() -&gt; nil retorna nil siempre
+
+saludos
+
+Wilson</p></div>
+      <div class="signature">Wilson 'W' Gamboa A<br>
+<a href="mailto:Wilson.josenet@gmail.com">Wilson.josenet@gmail.com</a></div>
+    </div>
+  </div>
+  <div class="post">
+    <div class="poster">
+      <div class="name"><a href="user-3881.html" style="color:#105289">walterburgos</a></div>
+      <div class="rank">Posts: 9</div>
+      <div class="avatar"></div>
+      <div class="joined">Joined: Thu Jul 27, 2017 04:59 PM</div>
+      
+    </div>
+    <div class="body">
+      <div class="meta">
+        <h3 id="p286208" class="subject">Re: OpenADS libre y de código abierto &amp;#127963;️&amp;#128142;&amp;#128170;</h3>
+        Posted: Wed Sep 09, 2026 04:28 PM
+      </div>
+      <div class="content"><p>Hola, tiene toda la razón. 
+
+La verdad es que nunca lo utilizo así ( dbappend() ).</p>
+
+<p>Mas allá de sacar la condición, me sigue dando el error que mencionaba.</p>
+
+<p>Gracias,  por tu aporte.</p></div>
+      <div class="signature"></div>
     </div>
   </div>
   <div class="giscus-wrap">
